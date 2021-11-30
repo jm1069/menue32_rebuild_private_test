@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    animation: fadeInAnimation ease 1.25s;
+    /* outline: 1px solid red; */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    /*  */
+}
+
+/* ANIMATIONS */
+/**
+ * ----------------------------------------
+ * animation fadein
+ * ----------------------------------------
+ */
+ @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-in-left
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+/* ---- */
+
+.spacer{
+    height: 20px;
+}
+
+.spacer-md{
+    height: 40px;
+}
+
+h1{
+    font-size: 3.5rem;
+    line-height: 1.25;
+}
+
+h2{
+    font-size: 2.25rem;
+    line-height: 1.25;
+    font-weight: 300;
+}
+
+
+/* Navigation */
+.logo{
+    width: 150px;
+}
+
+.nav-logo{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.opening-times{
+    color: #7aac2d;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(255,255,255,.925);
+    backdrop-filter: blur(6px);
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: #737373;
+    text-decoration: none;
+}
+
+.nav-links a:hover{
+    color: #7aac2d;
+    text-decoration: none;
+}
+
+/* Corona Warnung */
+.corona-warning{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 0.5px solid #737373;
+    border-top: 0.5px solid #737373;
+}
+
+.corona-warning p{
+    color: #737373;
+    font-size: 0.9rem;
+}
+
+.corona-warning a{
+    color: #ac2d2d;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+
+
+/* Hero Section */
+.hero-image{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 50%);
+}
+
+.hero-left-section{
+    float: right;
+    padding: 12rem;
+    margin: auto;
+    -webkit-animation: slide-in-left 1s ease-in-out both;
+	        animation: slide-in-left 1s ease-in-out both;
+
+}
+
+.hero-left-section p{
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: #737373;
+}
+
+.center-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #7aac2d;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: #52800b;
+}
+
+.hero-right-section{
+    /*   */
+}
+
+.hero-right-section img{
+    position: relative;
+    top: 10%;
+    width: 80%;
+    object-fit: cover;
+    height: auto;
+    border-radius: 8px;
+    transition: 0.3s ease 0s;
+}
+
+.hero-right-section img:hover{
+    transform: scale(1.05);
+}
+
+/* Guest Review Section */
+.guest-reviews{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+.review-card{
+    border: 1px solid #dfdfdf;
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.3s ease 0s;
+}
+
+.review-card:hover{
+    transform: scale(1.025);
+}
+
+.review{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-reviewer{
+    color:#737373;
+    font-size:1.2rem;
+}
+
+.star-rating{
+    padding: 10px 0 10px 0;
+}
+
+.star-rating i{
+    margin-right: 10px;
+    color: #7aac2d;
+}
+
+.review-card h3{
+    font-size: 1.75rem;
+    letter-spacing: 0;
+}
+
+.review-text p{
+    font-size: 1.1rem;
+}
+
+.review-text{
+    padding: 10px;
+}
+
+.review-view-all{
+    float:right;
+    text-align: right;
+    color: #737373;
+}
+
+/* Speisekarte */
+.concept{
+    display: flex;
+    padding: 4rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+.concept-section{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 40%);
+}
+
+.concept h3{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.concept h4{
+    font-size: 1.8rem;
+    font-weight: 300;
+    color:#7aac2d;
+}
+
+.concept-left-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.concept-left-section img{
+    position: relative;
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.3s ease 0s;
+}
+
+.concept-left-section img:hover{
+    transform: scale(1.05);
+}
+
+.concept-right-section{
+    padding-right: 10rem;
+}
+
+.concept-right-section p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.text-center-justify{
+    padding: 1rem 15rem;
+    text-align: center;
+}
+
+/* Reservierung */
+.reservation-section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0rem 4rem 4rem 4rem;
+}
+
+.reservation-section iframe{
+    border: none;
+    height: 300px;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    color: black;
+}
+
+footer a{
+    color: black;
+}
+
+/* Media Queries */
+@media (max-width: 1200px){
+
+}
+
+@media (max-width: 900px){
+
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 576px){
+
+}
